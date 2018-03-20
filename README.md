@@ -1,6 +1,6 @@
-# myapp
+# FlutterTips
 
-A new Flutter project.
+Flutterフレームワークの検証
 
 ## Getting Started
 
