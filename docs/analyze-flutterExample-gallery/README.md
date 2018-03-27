@@ -4,5 +4,5 @@
 
 # 備考
 
-拡張子mdjは、StarUMLファイルです。
+拡張子mdjは、StarUML2ファイルです。
 

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:FlutterTips/Domain/iTunes.dart';
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    iTunes.test();
+
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
@@ -34,6 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
