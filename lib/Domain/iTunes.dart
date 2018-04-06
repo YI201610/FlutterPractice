@@ -1,9 +1,6 @@
 import 'package:FlutterTips/TechnicalService/HTTPService.dart';
-import 'dart:async';
 
 class iTunes {
-
-  //https://rss.itunes.apple.com/api/v1/us/ios-apps/new-apps-we-love/all/10/explicit.json
 
   static void test() {
 
