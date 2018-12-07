@@ -7,10 +7,11 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageFirstState createState() => new _MyHomePageFirstState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+/// 最初の状態
+class _MyHomePageFirstState extends State<MyHomePage> {
   int _counter = 0;
 
   void _updateCounterText() {
