@@ -13,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  void _updateCounterText() {
     setState(() {
       _counter++;
     });
@@ -28,23 +28,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new Center(
         child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             new Text(
-              'ここに文言を設定',
+              'ここに文言を設定してください',
+              style: Theme.of(context).textTheme.display1,
             ),
             new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              '選択回数: $_counter',
+              style: Theme.of(context).textTheme.display2,
             ),
           ],
         ),
       ),
+
       floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: _updateCounterText,
+        tooltip: '長押しした際に表示するメッセージ',
         child: new Icon(Icons.add),
       ),
+
     );
   }
 }
