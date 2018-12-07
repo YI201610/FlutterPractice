@@ -10,7 +10,9 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageFirstState createState() => new _MyHomePageFirstState();
 }
 
-/// 最初の状態
+/**
+ * 最初の状態
+ */
 class _MyHomePageFirstState extends State<MyHomePage> {
   int _counter = 0;
 

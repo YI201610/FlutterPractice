@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
     iTunes.test();
 
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Practice',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'タイトル文字列'),
+      home: new MyHomePage(title: 'Flutter Practice'),
     );
   }
 }
