@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:FlutterTips/Domain/iTunes.dart';
 
 import 'package:FlutterTips/UI/MyHomePage.dart';
+import 'package:FlutterTips/UI/Sample1Page.dart';
 
 /*  */
 class MyApp extends StatelessWidget {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Practice'),
+
+      //home: new MyHomePage(title: 'Flutter Practice'),
+      home: new Sample1Page(),
+
     );
   }
 }
