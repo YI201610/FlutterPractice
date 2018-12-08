@@ -18,19 +18,19 @@ class _Sample2PageFirstState extends State<Sample2Page> with TickerProviderState
 
     Tickerを必要とする。
     */
-  AnimationController controller;
+  AnimationController animationController;
 
-  CurvedAnimation curve;
+  CurvedAnimation curvedAnimation;
 
   @override
   void initState() {
     super.initState();
 
-   /*アニメーションコントローラの生成*/
-   controller = AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
+   /*アニメーションコントローラの生成。 指定したmillisecondでアニメーションを実行するように設定。*/
+   animationController = AnimationController(duration: const Duration(milliseconds: 500), vsync: this);
 
-   /**/
-   curve = CurvedAnimation(parent: controller, curve: Curves.easeIn);
+   /* Animation<double>クラスであるCurvedAnimationを生成 */
+   curvedAnimation = CurvedAnimation(parent: animationController, curve: Curves.easeIn);
 
   }
 
@@ -42,21 +42,29 @@ class _Sample2PageFirstState extends State<Sample2Page> with TickerProviderState
       ),
       body: Center(
           child: Container(
+
+              /* SingleChildRenderObjectWidgetオブジェクトである、
+               * FadeTransitionオブジェクトを生成して設定 */
               child: FadeTransition(
-                  opacity: curve,
+                  opacity: curvedAnimation,
 
                   child: FlutterLogo(  /* Flutterロゴオブジェクトをアサイン*/
                     size: 100.0,
                   )
 
               )
+
           )
       ),
+
+      /*フローティング・アクションを生成*/
       floatingActionButton: FloatingActionButton(
         tooltip: 'Fade',  /*ボタン長押し時のメッセージ*/
         child: Icon(Icons.brush), /*Icons.brush: 筆マークのシステムアイコン*/
         onPressed: () {
-          controller.forward(); /**/
+
+          /*アニメーションコントローラーにアニメーション開始を依頼*/
+          animationController.forward(); /**/
         },
       ),
     );
@@ -64,7 +72,7 @@ class _Sample2PageFirstState extends State<Sample2Page> with TickerProviderState
 
   @override
   dispose() {
-    controller.dispose();
+    animationController.dispose();
     super.dispose();
   }
 }
