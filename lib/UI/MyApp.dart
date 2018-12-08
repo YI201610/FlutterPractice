@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:FlutterTips/Domain/iTunes.dart';
 
+
 import 'package:FlutterTips/UI/MyHomePage.dart';
 import 'package:FlutterTips/UI/Sample1Page.dart';
+import 'package:FlutterTips/UI/Sample2Page.dart';
 
 /*  */
 class MyApp extends StatelessWidget {
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
       ),
 
       //home: new MyHomePage(title: 'Flutter Practice'),
-      home: new Sample1Page(),
+      //home: new Sample1Page(),
+      home: new Sample2Page(title: 'hoge'),
 
     );
   }
