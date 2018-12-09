@@ -23,9 +23,16 @@ class RandomWordsState extends State<RandomWords> {
  * ランダムワードのリストを表示する状態
  */
 class RandomWordsState2 extends State<RandomWords> {
-  final _suggestions = <WordPair>[];
 
-  final _biggerFont = const TextStyle(fontSize: 18.0);
+  /*ランダム文字のリスト*/
+  final List<WordPair> _suggestions = <WordPair>[];
+
+  /*サイズ指定フォント*/
+  final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
+
+  /*ユーザーがお気に入りした項目のリスト*/
+  final Set<WordPair> _saved = new Set<WordPair>();
+
 
   /*ランダムワードのリストを生成して返す*/
   Widget _buildSuggestions() {
@@ -47,13 +54,28 @@ class RandomWordsState2 extends State<RandomWords> {
         });
   }
 
+  /**
+   * 行を生成する
+   */
   Widget _buildRow(WordPair pair) {
 
+    /* ユーザーがお気に入り登録しているかフラグ */
+    final bool alreadySaved = _saved.contains(pair);
+
     return ListTile(
+
+      /* 行のタイトル文字 */
       title: Text(
         pair.asPascalCase,
         style: _biggerFont,
       ),
+
+      /*行の末尾に配置するオブジェクト: アイコンを生成 */
+      trailing: new Icon(   // Add the lines from here...
+        alreadySaved ? Icons.favorite : Icons.favorite_border,
+        color: alreadySaved ? Colors.red : null,
+      ),                    // ... to here.
+
     );
   }
 
