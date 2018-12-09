@@ -40,11 +40,20 @@ class RandomWordsState2 extends State<RandomWords> {
     /*リストを生成して返す. ListView.builderというコンポーネントを使用*/
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
+
+        /**/
         itemBuilder: (context, i) {
-          // Add a one-pixel-high divider widget before each row in theListView.
+
+          /*奇数行には、高さ1ピクセルの罫線ウィジェットを返す*/
           if (i.isOdd) return Divider();
 
-          final index = i ~/ 2;
+          final index = i ~/ 2; //0,1,2,3,4,5,6,7...
+
+          /*行のindexが、メモリ内のsuggestions属性のサイズを超える場合、
+            10個のランダム文字列を追加.
+
+            generateWordPairs() ... english_wordsパッケージのサービス
+            */
           if (index >= _suggestions.length) {
             _suggestions.addAll(generateWordPairs().take(10));
           }
@@ -71,10 +80,23 @@ class RandomWordsState2 extends State<RandomWords> {
       ),
 
       /*行の末尾に配置するオブジェクト: アイコンを生成 */
-      trailing: new Icon(   // Add the lines from here...
+      trailing: new Icon(
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,
-      ),                    // ... to here.
+      ),
+
+      /*行が選択された際のハンドラーメソッドを追加*/
+      onTap: () {
+
+        /*setState()メソッドを実行すると、build()メソッドが発動する*/
+        setState(() {
+          if (alreadySaved) {
+            _saved.remove(pair);
+          } else {
+            _saved.add(pair);
+          }
+        });
+      },
 
     );
   }
