@@ -2,7 +2,10 @@
 
 Flutterフレームワークの検証
 
-## 参考文献
+## 参考資料
 
-https://flutter.io/docs
+- 公式ドキュメントTop
+  - https://flutter.io/docs
+- 公式チュートリアル後、次のステップ一覧
+  - https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#8
 
