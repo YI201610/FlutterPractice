@@ -45,8 +45,6 @@ class SimpleWidgetListPageDefaultState extends State<SimpleWidgetListPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
 
-            RandomWords(),
-
             new Text(
               wordPair.asPascalCase,
               style: Theme.of(context).textTheme.display1,
