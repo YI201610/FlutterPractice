@@ -1,4 +1,4 @@
-# FlutterTips
+# FlutterPractice
 
 Flutterフレームワークの検証
 
