@@ -1,69 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:FlutterTips/Domain/iTunes.dart';
+import 'package:FlutterPractice/Domain/iTunes.dart';
 
+
+import 'package:FlutterPractice/UI/SimpleWidgetListPage.dart';
+import 'package:FlutterPractice/UI/RandomWords.dart';
+import 'package:FlutterPractice/UI/Sample1Page.dart';
+import 'package:FlutterPractice/UI/Sample2Page.dart';
+import 'package:FlutterPractice/UI/Sample3Page.dart';
+import 'package:FlutterPractice/UI/RandomWords.dart';
+
+/*  */
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
 
     iTunes.test();
 
+    /*マテリアル・デザインベースのアプリを生成する*/
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Practice',
+
+      /*テーマを生成する*/
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: new MyHomePage(title: 'タイトル文字列'),
+
+      //home: new SimpleWidgetListPage(title: 'Flutter Practice'),
+      home: new RandomWords(),
+      //home: new Sample1Page(),
+      //home: new Sample2Page(title: 'hoge'),
+      //home: new Sample3Page(),
+
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  /* Constructor */
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
-
-
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'ここに文言を設定',
-            ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ),
-    );
-  }
-}
