@@ -107,8 +107,54 @@ class RandomWordsState2 extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
+
+        actions: <Widget>[
+          /* AppBarにリストアイコンを追加 */
+          new IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved),
+        ],
+
       ),
       body: _buildSuggestions(),  //リストを生成する
+    );
+  }
+
+  /*画面に、新しいrouteをpushする*/
+  void _pushSaved() {
+
+    Navigator.of(context).push(
+
+      /* MaterialPageRouteウィジェットビルダーを生成する */
+      new MaterialPageRoute<void>(   // Add 20 lines from here...
+        builder: (BuildContext context) {
+
+          final Iterable<ListTile> tiles = _saved.map(
+                (WordPair pair) {
+              return new ListTile(
+                title: new Text(
+                  pair.asPascalCase,
+                  style: _biggerFont,
+                ),
+              );
+            },
+          );
+
+          /*最終行を保持する*/
+          final List<Widget> divided = ListTile.divideTiles(
+            context: context,
+            tiles: tiles,
+          ).toList();   //toList() ... 要素をリストに変換する便利メソッド
+
+
+          /**/
+          return new Scaffold(         // Add 6 lines from here...
+            appBar: new AppBar(
+              title: const Text('お気に入り一覧'),
+            ),
+            body: new ListView(children: divided),
+          );                           // ... to here.
+
+        },
+      ),                           // ... to here.
     );
   }
 }
