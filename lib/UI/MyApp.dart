@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
 
       /*テーマを生成する*/
       theme: new ThemeData(
-        primarySwatch: Colors.blueGrey,
+        //primarySwatch: Colors.blueGrey,
+        primaryColor: Colors.white,
       ),
 
       //home: new SimpleWidgetListPage(title: 'Flutter Practice'),
