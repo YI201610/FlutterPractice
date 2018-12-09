@@ -138,7 +138,7 @@ class RandomWordsState2 extends State<RandomWords> {
             },
           );
 
-          /*最終行を保持する*/
+          /* 1ピクセルの罫線が追加されたリストを生成する。*/
           final List<Widget> divided = ListTile.divideTiles(
             context: context,
             tiles: tiles,
