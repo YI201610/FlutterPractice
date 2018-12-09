@@ -1,6 +1,8 @@
 name: FlutterPractice
 description: Flutterフレームワークの検証
 
+version: 1.0.0
+
 dependencies:
   flutter:
     sdk: flutter
