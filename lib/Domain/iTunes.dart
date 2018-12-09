@@ -1,4 +1,4 @@
-import 'package:FlutterTips/TechnicalService/HTTPService.dart';
+import 'package:FlutterPractice/TechnicalService/HTTPService.dart';
 
 class iTunes {
 
