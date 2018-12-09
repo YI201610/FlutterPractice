@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
-class MyHomePage extends StatefulWidget {
+class FirstSamplePage extends StatefulWidget {
   final String title;
 
   /* Constructor */
-  MyHomePage({Key key, this.title}) : super(key: key);
+  FirstSamplePage({Key key, this.title}) : super(key: key);
 
   @override
-  _MyHomePageFirstState createState() => new _MyHomePageFirstState();
+  _FirstSamplePageDefaultState createState() => new _FirstSamplePageDefaultState();
 }
 
 /**
  * 最初の状態
  */
-class _MyHomePageFirstState extends State<MyHomePage> {
+class _FirstSamplePageDefaultState extends State<FirstSamplePage> {
+
   int _counter = 0;
+  final wordPair = WordPair.random();
 
   void _updateCounterText() {
     setState(() {
@@ -34,7 +37,7 @@ class _MyHomePageFirstState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             new Text(
-              'ここに文言を設定してください',
+              wordPair.asPascalCase,
               style: Theme.of(context).textTheme.display1,
             ),
             new Text(
