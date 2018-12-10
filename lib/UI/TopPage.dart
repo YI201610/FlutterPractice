@@ -75,7 +75,7 @@ class TopPageState extends State<TopPage> {
                 body: Center(
 
                   /* 内部の要素を返すプライベートメソッドを指定 */
-                  child: Text("内部"),
+                  child: Text("詳細"),
                 ),
               );
             }
