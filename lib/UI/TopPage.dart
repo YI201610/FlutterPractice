@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:FlutterPractice/UI/RandomWords.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -67,17 +68,7 @@ class TopPageState extends State<TopPage> {
           /* MaterialPageRouteウィジェットビルダーを生成する */
           new MaterialPageRoute<void>(
             builder: (BuildContext context) {
-              return Scaffold(
-                appBar: AppBar(
-                  title: Text(menuItem),
-                ),
-
-                body: Center(
-
-                  /* 内部の要素を返すプライベートメソッドを指定 */
-                  child: Text("詳細"),
-                ),
-              );
+              return RandomWords();
             }
           ),
         );
