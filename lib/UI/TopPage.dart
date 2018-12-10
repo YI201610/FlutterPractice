@@ -26,21 +26,7 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
-    _menuItemList.add(_buildRow('sample UI1'));
-    _menuItemList.add(_buildRow('sample UI2'));
-    _menuItemList.add(_buildRow('sample UI3'));
-    _menuItemList.add(_buildRow('sample UI4'));
-    _menuItemList.add(_buildRow('sample UI5'));
-    _menuItemList.add(_buildRow('sample UI6'));
-    _menuItemList.add(_buildRow('sample UI7'));
-    _menuItemList.add(_buildRow('sample UI8'));
-    _menuItemList.add(_buildRow('sample UI9'));
-    _menuItemList.add(_buildRow('sample UI10'));
-    _menuItemList.add(_buildRow('sample UI11'));
-    _menuItemList.add(_buildRow('sample UI12'));
-    _menuItemList.add(_buildRow('sample UI13'));
-    _menuItemList.add(_buildRow('sample UI14'));
-    _menuItemList.add(_buildRow('sample UI15'));
+    _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
@@ -51,7 +37,7 @@ class TopPageState extends State<TopPage> {
   /**
    * 行を生成する
    */
-  Widget _buildRow(String menuItem) {
+  Widget _createlistTile(String menuItem, Widget object) {
 
     return ListTile(
 
@@ -68,7 +54,7 @@ class TopPageState extends State<TopPage> {
           /* MaterialPageRouteウィジェットビルダーを生成する */
           new MaterialPageRoute<void>(
             builder: (BuildContext context) {
-              return RandomWords();
+              return object;
             }
           ),
         );
