@@ -110,7 +110,7 @@ class RandomWordsState2 extends State<RandomWords> {
 
         actions: <Widget>[
           /* AppBarにリストアイコンを追加 */
-          new IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved),
+          new IconButton(icon: const Icon(Icons.list), onPressed: _pushFavoriteListWidget),
         ],
 
       ),
@@ -119,7 +119,7 @@ class RandomWordsState2 extends State<RandomWords> {
   }
 
   /*画面に、新しいrouteをpushする*/
-  void _pushSaved() {
+  void _pushFavoriteListWidget() {
 
     Navigator.of(context).push(
 
@@ -134,6 +134,9 @@ class RandomWordsState2 extends State<RandomWords> {
                   pair.asPascalCase,
                   style: _biggerFont,
                 ),
+                onTap: () {
+
+                },
               );
             },
           );
@@ -157,4 +160,5 @@ class RandomWordsState2 extends State<RandomWords> {
       ),                           // ... to here.
     );
   }
+
 }
