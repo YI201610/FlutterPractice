@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:FlutterPractice/UI/RandomWords.dart';
+
+import 'package:FlutterPractice/UI/Menu/RandomWords.dart';
+import 'package:FlutterPractice/UI/Menu/SimpleWidgetListPage.dart';
+import 'package:FlutterPractice/UI/Menu/Sample1Page.dart';
+import 'package:FlutterPractice/UI/Menu/Sample2Page.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -27,6 +31,9 @@ class TopPageState extends State<TopPage> {
   Widget _buildMenuList() {
 
     _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
+    _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
+    _menuItemList.add(_createlistTile('Sample1', Sample1Page()));
+    _menuItemList.add(_createlistTile('Sample2', Sample2Page(title: "Sample2")));
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
