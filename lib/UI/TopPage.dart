@@ -4,6 +4,7 @@ import 'package:FlutterPractice/UI/Menu/RandomWords.dart';
 import 'package:FlutterPractice/UI/Menu/SimpleWidgetListPage.dart';
 import 'package:FlutterPractice/UI/Menu/CupertinoButtonSample.dart';
 import 'package:FlutterPractice/UI/Menu/FlutterLogoFadeInSample.dart';
+import 'package:FlutterPractice/UI/Menu/ImageSample1.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -35,6 +36,7 @@ class TopPageState extends State<TopPage> {
     _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
     final title = 'Flutter Logo FadeIn Sample';
     _menuItemList.add(_createlistTile(title, FlutterLogoFadeInSample(title: title)));
+    _menuItemList.add(_createlistTile('Image Sample 1', ImageSample1(title: 'Image Sample1',)));
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
