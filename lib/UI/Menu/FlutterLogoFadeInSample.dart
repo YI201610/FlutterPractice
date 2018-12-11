@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 ///アニメーション機能を検証するウィジェット
-class Sample2Page extends StatefulWidget {
-  Sample2Page({Key key, this.title}) : super(key: key);
+class FlutterLogoFadeInSample extends StatefulWidget {
+  FlutterLogoFadeInSample({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _Sample2PageFirstState createState() => _Sample2PageFirstState();
+  _FlutterLogoFadeInSampleState createState() => _FlutterLogoFadeInSampleState();
 }
 
 ///最初の状態クラス
-class _Sample2PageFirstState extends State<Sample2Page> with TickerProviderStateMixin {
+class _FlutterLogoFadeInSampleState extends State<FlutterLogoFadeInSample> with TickerProviderStateMixin {
 
   /* AnimationController: アニメーションを行うためのクラス.
     pause, seek, stop, reverseが可能。
