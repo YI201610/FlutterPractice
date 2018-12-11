@@ -44,7 +44,7 @@ class _CupertinoButtonSampleState extends State<CupertinoButtonSample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sample App"),
+        title: Text("CupertinoButtonSample"),
       ),
 
       body: Center(
