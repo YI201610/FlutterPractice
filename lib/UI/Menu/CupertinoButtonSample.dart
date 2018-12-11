@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 /**/
-class Sample1Page extends StatefulWidget {
-  Sample1Page({Key key}) : super(key: key);
+class CupertinoButtonSample extends StatefulWidget {
+  CupertinoButtonSample({Key key}) : super(key: key);
 
   @override
-  _Sample1PageState createState() => _Sample1PageState();
+  _CupertinoButtonSampleState createState() => _CupertinoButtonSampleState();
 }
 
 /**/
-class _Sample1PageState extends State<Sample1Page> {
+class _CupertinoButtonSampleState extends State<CupertinoButtonSample> {
   // Default value for toggle
   bool toggle = true;
   void _didSelectToggleButton() {
