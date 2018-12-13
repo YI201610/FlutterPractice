@@ -3,8 +3,8 @@ import 'package:english_words/english_words.dart';
 
 class RandomWords extends StatefulWidget {
   @override
-  //RandomWordsState createState() => new RandomWordsState();
-  RandomWordsState2 createState() => new RandomWordsState2();
+  RandomWordsState createState() => new RandomWordsState();
+  //RandomWordsState2 createState() => new RandomWordsState2();
 }
 
 /**
