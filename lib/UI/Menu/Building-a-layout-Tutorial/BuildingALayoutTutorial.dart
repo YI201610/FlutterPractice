@@ -123,6 +123,7 @@ class BuildingALayoutTutorial extends StatelessWidget {
       ),
     );
 
+    /*画像セクションを生成*/
     Widget imageSection = Container (
       padding: const EdgeInsets.all(5.0),
       child: Image.asset(
@@ -133,9 +134,10 @@ class BuildingALayoutTutorial extends StatelessWidget {
       ),
     );
 
+    /**/
     return new Scaffold(
       appBar: AppBar(
-        title: Text('Building A Layout Sample'),
+        title: Text('レイアウト構築サンプル'),
       ),
       body: ListView(
         children: [
