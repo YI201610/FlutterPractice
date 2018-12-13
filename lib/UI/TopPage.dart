@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:FlutterPractice/UI/Menu/RandomWords.dart';
-import 'package:FlutterPractice/UI/Menu/SimpleWidgetListPage.dart';
-import 'package:FlutterPractice/UI/Menu/CupertinoButtonSample.dart';
-import 'package:FlutterPractice/UI/Menu/FlutterLogoFadeInSample.dart';
-import 'package:FlutterPractice/UI/Menu/ImageSample1.dart';
-import 'package:FlutterPractice/UI/Menu/httpNetworkingSample.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/RandomWords.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/SimpleWidgetListPage.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/CupertinoButtonSample.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/FlutterLogoFadeInSample.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/ImageSample1.dart';
+import 'package:FlutterPractice/UI/Menu/FirstStep/httpNetworkingSample.dart';
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
 
 class TopPage extends StatefulWidget {
