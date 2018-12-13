@@ -134,7 +134,7 @@ class BuildingALayoutTutorial extends StatelessWidget {
       ),
     );
 
-    /**/
+    /*MaterialコンポーネントのScaffoldで標準的な画面を作成*/
     return new Scaffold(
       appBar: AppBar(
         title: Text('レイアウト構築サンプル'),
