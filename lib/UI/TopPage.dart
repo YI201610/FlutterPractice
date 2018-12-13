@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:FlutterPractice/UI/Menu/FirstStep/RandomWords.dart';
-import 'package:FlutterPractice/UI/Menu/FirstStep/SimpleWidgetListPage.dart';
-import 'package:FlutterPractice/UI/Menu/FirstStep/CupertinoButtonSample.dart';
-import 'package:FlutterPractice/UI/Menu/FirstStep/FlutterLogoFadeInSample.dart';
-import 'package:FlutterPractice/UI/Menu/FirstStep/ImageSample1.dart';
-import 'package:FlutterPractice/UI/Menu/FirstStep/httpNetworkingSample.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/RandomWords.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/SimpleWidgetListPage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/CupertinoButtonSample.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/FlutterLogoFadeInSample.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/ImageSample1.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/httpNetworkingSample.dart';
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -33,6 +34,7 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
+    /*追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。でないとpopできない。*/
     _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
     _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
     _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
@@ -41,6 +43,7 @@ class TopPageState extends State<TopPage> {
     _menuItemList.add(_createlistTile('Image Sample 1', ImageSample1(title: 'Image Sample1',)));
     _menuItemList.add(_createlistTile('HTTP通信Sample 1', httpNetworkingSample(title: 'HTTP通信 Sample1',)));
     _menuItemList.add(_createlistTile('Building A Layout Tutorial', BuildingALayoutTutorial()));
+    _menuItemList.add(_createlistTile('non-Materialウィジェット', WidgetOnly()));
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
