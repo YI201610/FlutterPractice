@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-/**/
 class CupertinoButtonSample extends StatefulWidget {
   CupertinoButtonSample({Key key}) : super(key: key);
 
@@ -9,7 +8,6 @@ class CupertinoButtonSample extends StatefulWidget {
   _CupertinoButtonSampleState createState() => _CupertinoButtonSampleState();
 }
 
-/**/
 class _CupertinoButtonSampleState extends State<CupertinoButtonSample> {
   // Default value for toggle
   bool toggle = true;

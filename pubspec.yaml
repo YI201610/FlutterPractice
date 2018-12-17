@@ -22,4 +22,9 @@ flutter:
   uses-material-design: true
   assets:
     - images/sandwich.jpg
+    - images/autumn-table1.jpg
+    - images/autumn-tree1.jpg
+    - images/thumbnail/sandwich.jpg
+    - images/thumbnail/autumn-table1.jpg
+    - images/thumbnail/autumn-tree1.jpg
 
