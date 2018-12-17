@@ -9,6 +9,7 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/httpNetworkingSample.dart';
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -52,6 +53,9 @@ class TopPageState extends State<TopPage> {
 
     title = '水平方向配置:SpaceEvenlyで画像表示';
     _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesRowPage(title: title)));
+
+    title = '垂直方向配置:SpaceEvenlyで画像表示';
+    _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesColumnPage(title: title)));
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
