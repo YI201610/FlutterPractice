@@ -24,9 +24,9 @@ class _SpaceEvenlyImagesRowPageState extends State<SpaceEvenlyImagesRowPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('images/thumbnail/sandwich.jpg'),
-                  Image.asset('images/thumbnail/autumn-table1.jpg'),
-                  Image.asset('images/thumbnail/autumn-tree1.jpg'),
+                  Image.asset('images/thumbnail/sandwich-100.jpg'),
+                  Image.asset('images/thumbnail/autumn-table1-100.jpg'),
+                  Image.asset('images/thumbnail/autumn-tree1-100.jpg'),
                 ],
               ),
             ),
