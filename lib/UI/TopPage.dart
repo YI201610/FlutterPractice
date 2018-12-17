@@ -8,6 +8,8 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/ImageSample1.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/httpNetworkingSample.dart';
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -32,18 +34,32 @@ class TopPageState extends State<TopPage> {
     );
   }
 
+
   Widget _buildMenuList() {
 
+    var title = '';
+
     /*追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。でないとpopできない。*/
-    _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
-    _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
-    _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
-    final title = 'Flutter Logo FadeIn Sample';
-    _menuItemList.add(_createlistTile(title, FlutterLogoFadeInSample(title: title)));
-    _menuItemList.add(_createlistTile('Image Sample 1', ImageSample1(title: 'Image Sample1',)));
-    _menuItemList.add(_createlistTile('HTTP通信Sample 1', httpNetworkingSample(title: 'HTTP通信 Sample1',)));
-    _menuItemList.add(_createlistTile('Building A Layout Tutorial', BuildingALayoutTutorial()));
+
+    title = '水平方向配置:SpaceEvenlyで画像表示';
+    _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesRowPage(title: title)));
+
+    title = '垂直方向配置:SpaceEvenlyで画像表示';
+    _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesColumnPage(title: title)));
+
     _menuItemList.add(_createlistTile('non-Materialウィジェット', WidgetOnly()));
+    _menuItemList.add(_createlistTile('Building A Layout Tutorial', BuildingALayoutTutorial()));
+    _menuItemList.add(_createlistTile('HTTP通信Sample 1', httpNetworkingSample(title: 'HTTP通信 Sample1')));
+    _menuItemList.add(_createlistTile('Image Sample 1', ImageSample1(title: 'Image Sample1',)));
+
+    title = 'Flutter Logo FadeIn Sample';
+    _menuItemList.add(_createlistTile(title, FlutterLogoFadeInSample(title: title)));
+
+    _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
+    _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
+    _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
+
+
 
     return ListView(
       padding: const EdgeInsets.all(20.0),

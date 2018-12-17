@@ -26,6 +26,8 @@ class httpNetworkingSampleState extends State<httpNetworkingSample> {
       body: new Center(
 
         child: new Column(
+
+          /* 水平方向の整列属性を指定 */
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
 

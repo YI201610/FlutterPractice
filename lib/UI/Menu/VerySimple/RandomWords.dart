@@ -3,20 +3,7 @@ import 'package:english_words/english_words.dart';
 
 class RandomWords extends StatefulWidget {
   @override
-  RandomWordsState createState() => new RandomWordsState();
-  //RandomWordsState2 createState() => new RandomWordsState2();
-}
-
-/**
- * ２語のランダムワードを1つ返す状態
- */
-class RandomWordsState extends State<RandomWords> {
-
-  @override
-  Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
-  }
+  RandomWordsState2 createState() => new RandomWordsState2();
 }
 
 /**
