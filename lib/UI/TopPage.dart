@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
 import 'package:FlutterPractice/UI/Menu/VerySimple/RandomWords.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SimpleWidgetListPage.dart';
@@ -11,6 +12,7 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/PackingSamplePage.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -27,6 +29,10 @@ class TopPageState extends State<TopPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    /*画面描画時にデバッグ図形を表示したい場合は、次の行を有効にする*/
+    debugPaintSizeEnabled = false;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('検証項目一覧'),
@@ -44,6 +50,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = 'Packingサンプル';
+    _menuItemList.add(_createlistTile(title, PackingSamplePage(title: title)));
 
     title = 'Expandedウィジェットサンプル';
     _menuItemList.add(_createlistTile(title, ExpandedImageSamplePage(title: title)));
