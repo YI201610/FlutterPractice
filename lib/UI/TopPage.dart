@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
 import 'package:FlutterPractice/UI/Menu/VerySimple/RandomWords.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SimpleWidgetListPage.dart';
@@ -10,6 +11,8 @@ import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayo
 import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/PackingSamplePage.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -22,10 +25,14 @@ class TopPageState extends State<TopPage> {
   final List<ListTile> _menuItemList = <ListTile>[];
 
   /*サイズ指定フォント*/
-  final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
+  final TextStyle _biggerFont = const TextStyle(fontSize: 20.0);
 
   @override
   Widget build(BuildContext context) {
+
+    /*画面描画時にデバッグ図形を表示したい場合は、次の行を有効にする*/
+    debugPaintSizeEnabled = false;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('検証項目一覧'),
@@ -37,9 +44,18 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
+    /*
+    (!) 追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。
+        でないとNavigationからpopできない。
+    */
+
     var title = '';
 
-    /*追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。でないとpopできない。*/
+    title = 'Packingサンプル';
+    _menuItemList.add(_createlistTile(title, PackingSamplePage(title: title)));
+
+    title = 'Expandedウィジェットサンプル';
+    _menuItemList.add(_createlistTile(title, ExpandedImageSamplePage(title: title)));
 
     title = '水平方向配置:SpaceEvenlyで画像表示';
     _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesRowPage(title: title)));
