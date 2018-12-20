@@ -10,6 +10,7 @@ import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayo
 import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
+import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class TopPageState extends State<TopPage> {
   final List<ListTile> _menuItemList = <ListTile>[];
 
   /*サイズ指定フォント*/
-  final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
+  final TextStyle _biggerFont = const TextStyle(fontSize: 20.0);
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +38,15 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
+    /*
+    (!) 追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。
+        でないとNavigationからpopできない。
+    */
+
     var title = '';
 
-    /*追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。でないとpopできない。*/
+    title = 'Expandedウィジェットサンプル';
+    _menuItemList.add(_createlistTile(title, ExpandedImageSamplePage(title: title)));
 
     title = '水平方向配置:SpaceEvenlyで画像表示';
     _menuItemList.add(_createlistTile(title, SpaceEvenlyImagesRowPage(title: title)));
