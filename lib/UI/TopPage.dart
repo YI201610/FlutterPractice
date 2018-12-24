@@ -13,6 +13,7 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/PackingSamplePage.dart';
+import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/NestingRowsAndColumns.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -50,6 +51,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = '行と列のネスティング・レイアウトサンプル';
+    _menuItemList.add(_createlistTile(title, NestingRowsAndColumns(title: title)));
 
     title = 'Packingサンプル';
     _menuItemList.add(_createlistTile(title, PackingSamplePage(title: title)));
