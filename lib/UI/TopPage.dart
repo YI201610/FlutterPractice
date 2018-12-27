@@ -18,6 +18,7 @@ import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/NestingRowsAn
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleContainer.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/GridViewSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/ListViewSample.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleStackSample.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -55,6 +56,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = 'シンプルなStackサンプル';
+    _menuItemList.add(_createlistTile(title, SimpleStackSamplePage(title: title)));
 
     title = 'ListViewサンプル';
     _menuItemList.add(_createlistTile(title, ListViewSamplePage(title: title)));
