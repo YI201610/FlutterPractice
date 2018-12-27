@@ -16,7 +16,7 @@ class _SimpleStackSamplePageState extends State<SimpleStackSamplePage> {
       alignment: const Alignment(0.6, 0.6),
       children: [
         CircleAvatar(
-          backgroundImage: AssetImage('images/autumn-tree1.jpg'),
+          backgroundImage: AssetImage('images/autumn-table1.jpg'),
           radius: 180.0,
         ),
         Container(
