@@ -50,6 +50,8 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
+    _menuItemList.clear();
+
     /*
     (!) 追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。
         でないとNavigationからpopできない。
@@ -95,8 +97,6 @@ class TopPageState extends State<TopPage> {
     _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
     _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
     _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
-
-
 
     return ListView(
       padding: const EdgeInsets.all(20.0),
