@@ -11,6 +11,7 @@ class CupertinoButtonSample extends StatefulWidget {
 class _CupertinoButtonSampleState extends State<CupertinoButtonSample> {
   // Default value for toggle
   bool toggle = true;
+
   void _didSelectToggleButton() {
 
     /* setState()を実行することで、フレームワークがbuild()メソッドの実行をスケジュールする。*/

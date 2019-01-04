@@ -19,6 +19,7 @@ import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleContainer.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/GridViewSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/ListViewSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleStackSample.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleCardSample.dart';
 
 class TopPage extends StatefulWidget {
   @override
@@ -58,6 +59,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = 'シンプルなCardサンプル';
+    _menuItemList.add(_createlistTile(title, SimpleCardSamplePage(title: title)));
 
     title = 'シンプルなStackサンプル';
     _menuItemList.add(_createlistTile(title, SimpleStackSamplePage(title: title)));
