@@ -131,7 +131,7 @@ class _NestingRowsAndColumnsState extends State<NestingRowsAndColumns> {
 
     /*レイアウト群をContainerとして実装*/
     var leftColumnContainer = Container(
-      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
+      padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 20.0),
       child: Column(
         children: [
           titleTextContainer,
@@ -169,7 +169,6 @@ class _NestingRowsAndColumnsState extends State<NestingRowsAndColumns> {
 
                 /* 多重にネストされたレイアウト・ウィジェットでContainerを生成 */
                 Container(
-                  width: 440.0,
                   child: leftColumnContainer,
                 ),
 

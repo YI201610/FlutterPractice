@@ -15,6 +15,12 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart'
 import 'package:FlutterPractice/UI/Menu/VerySimple/PackingSamplePage.dart';
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/NestingRowsAndColumns.dart';
 
+import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleContainer.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/GridViewSample.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/ListViewSample.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleStackSample.dart';
+import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleCardSample.dart';
+
 class TopPage extends StatefulWidget {
   @override
   TopPageState createState() => new TopPageState();
@@ -45,12 +51,29 @@ class TopPageState extends State<TopPage> {
 
   Widget _buildMenuList() {
 
+    _menuItemList.clear();
+
     /*
     (!) 追加する検証項目は、AppBarを持つMaterialウィジェットである必要がある。
         でないとNavigationからpopできない。
     */
 
     var title = '';
+
+    title = 'シンプルなCardサンプル';
+    _menuItemList.add(_createlistTile(title, SimpleCardSamplePage(title: title)));
+
+    title = 'シンプルなStackサンプル';
+    _menuItemList.add(_createlistTile(title, SimpleStackSamplePage(title: title)));
+
+    title = 'ListViewサンプル';
+    _menuItemList.add(_createlistTile(title, ListViewSamplePage(title: title)));
+
+    title = 'GridViewサンプル';
+    _menuItemList.add(_createlistTile(title, GridViewSamplePage(title: title)));
+
+    title = 'Containerサンプル';
+    _menuItemList.add(_createlistTile(title, SimpleContainerPage(title: title)));
 
     title = '行と列のネスティング・レイアウトサンプル';
     _menuItemList.add(_createlistTile(title, NestingRowsAndColumns(title: title)));
@@ -78,8 +101,6 @@ class TopPageState extends State<TopPage> {
     _menuItemList.add(_createlistTile('CupertinoButtonSample', CupertinoButtonSample()));
     _menuItemList.add(_createlistTile('Simple Widget List Page', SimpleWidgetListPage(title: "Simple Widget")));
     _menuItemList.add(_createlistTile('Random Word Generator', RandomWords()));
-
-
 
     return ListView(
       padding: const EdgeInsets.all(20.0),

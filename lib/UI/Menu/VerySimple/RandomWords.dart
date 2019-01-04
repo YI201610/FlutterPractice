@@ -124,6 +124,12 @@ class RandomWordsState2 extends State<RandomWords> {
                 onTap: () {
 
                 },
+
+                leading: Icon(
+                  Icons.public,
+                color: Colors.blue[500],
+              ),
+
               );
             },
           );
