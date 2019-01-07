@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/StatefulWidget/FavoriteStatefulWidget.dart';
 
 /* Building Layout公式サンプル*/
 class BuildingALayoutTutorial extends StatelessWidget {
@@ -46,14 +47,7 @@ class BuildingALayoutTutorial extends StatelessWidget {
             ),
           ),
 
-          Icon(
-            Icons.star,
-            //Icons.star_half,
-            //Icons.star_border,
-            color: Colors.red[500],
-          ),
-
-          Text('41'),
+          FavoriteStatefulWidget(),
         ],
       ),
     ); /* titleSection */
