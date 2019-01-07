@@ -47,11 +47,13 @@ class BuildingALayoutTutorial extends StatelessWidget {
           ),
 
           Icon(
-            Icons.stars,
+            Icons.star,
+            //Icons.star_half,
+            //Icons.star_border,
             color: Colors.red[500],
           ),
 
-          Text('末尾のテキスト'),
+          Text('41'),
         ],
       ),
     ); /* titleSection */
