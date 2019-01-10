@@ -46,7 +46,7 @@ class _FavoriteStatefulWidgetState extends State<FavoriteStatefulWidget> {
 
         ),
         SizedBox(
-          width: 18.0,
+          width: 22.0,
           child: Container(
             child: Text('$_favoriteCount'),
           ),
