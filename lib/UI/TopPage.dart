@@ -21,6 +21,9 @@ import 'package:FlutterPractice/UI/Menu/LayoutSample/ListViewSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleStackSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleCardSample.dart';
 
+import 'package:FlutterPractice/UI/Menu/PackageDemo/BatterySample.dart';
+
+
 class TopPage extends StatefulWidget {
   @override
   TopPageState createState() => new TopPageState();
@@ -59,6 +62,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = 'batteryパッケージサンプル';
+    _menuItemList.add(_createlistTile(title, BatterySamplePage(title: title)));
 
     title = 'シンプルなCardサンプル';
     _menuItemList.add(_createlistTile(title, SimpleCardSamplePage(title: title)));
