@@ -9,4 +9,5 @@ Flutterフレームワークの検証
 - 公式チュートリアル後、次のステップ一覧
   - https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#8
     - [Adding interactivity](https://flutter.io/docs/development/ui/interactive)
+    - [Developing packages & plugins](https://flutter.io/docs/development/packages-and-plugins/developing-packages)
 
