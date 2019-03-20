@@ -7,13 +7,14 @@ import 'package:FlutterPractice/UI/Menu/VerySimple/CupertinoButtonSample.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/FlutterLogoFadeInSample.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/ImageSample1.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/httpNetworkingSample.dart';
-import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/WidgetOnly.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesRowPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/SpaceEvenlyImagesColumnPage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/ExpandedImageSamplePage.dart';
 import 'package:FlutterPractice/UI/Menu/VerySimple/PackingSamplePage.dart';
+
 import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/NestingRowsAndColumns.dart';
+import 'package:FlutterPractice/UI/Menu/Building-a-layout-Tutorial/BuildingALayoutTutorial.dart';
 
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleContainer.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/GridViewSample.dart';
@@ -22,6 +23,8 @@ import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleStackSample.dart';
 import 'package:FlutterPractice/UI/Menu/LayoutSample/SimpleCardSample.dart';
 
 import 'package:FlutterPractice/UI/Menu/PackageDemo/BatterySample.dart';
+
+import 'package:FlutterPractice/UI/Menu/webAPICallSample/callWebAPISample.dart';
 
 
 class TopPage extends StatefulWidget {
@@ -62,6 +65,9 @@ class TopPageState extends State<TopPage> {
     */
 
     var title = '';
+
+    title = 'Web API実行サンプル';
+    _menuItemList.add(_createlistTile(title, callWebAPISample(title: title)));
 
     title = 'batteryパッケージサンプル';
     _menuItemList.add(_createlistTile(title, BatterySamplePage(title: title)));
