@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:FlutterPractice/Domain/iTunes.dart';
+//import 'package:json_serializable/json_serializable.dart';
+
+import 'dart:convert';
+
+import 'user.dart';
 
 class callWebAPISample extends StatefulWidget {
   final String title;
@@ -15,6 +20,13 @@ class callWebAPISampleState extends State<callWebAPISample> {
 
   @override
   Widget build(BuildContext context) {
+
+    var jsonString = '''
+    { "name": "コーディング 太郎", "email": "coding-like-taro@github-user-sample-201903021.com" }
+''';
+
+    Map userMap = jsonDecode(jsonString);
+    var user = User.fromJson(userMap);
 
     /*通信を実行*/
     iTunes.test();
